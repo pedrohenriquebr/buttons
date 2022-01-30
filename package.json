@@ -1,0 +1,24 @@
+{
+  "name": "buttons",
+  "version": "0.0.1",
+  "description": "Buttons dev challenge",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohenriquebr/buttons.git"
+  },
+  "keywords": [
+    "react",
+    "github",
+    "devchallenges"
+  ],
+  "author": "pedrobraga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedrohenriquebr/buttons/issues"
+  },
+  "homepage": "https://github.com/pedrohenriquebr/buttons#readme"
+}
