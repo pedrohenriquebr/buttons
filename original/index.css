@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
+@import url("http://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --ff-poppins: Poppins, sans-serif;
+  --ff-noton: "Noto Sans JP", sans-serif;
+  --btn-default-bg-color: #e0e0e0;
+  --btn-default-bg-color-hover: #aeaeae;
+  --btn-default-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  --border-radius: 6px;
+  --padding: 8px 16px;
+  --padding-sm: 6px 12px;
+  --padding-md: 8px 16px;
+  --padding-lg: 11px 22px;
+  --primary-color: rgba(0, 57, 203, 1);
+  --primary-color-light: 41, 98, 255;
+  --default-color: rgba(224, 224, 224, 1);
+  --secondary-color-light: 69, 90, 100;
+  --secondary-color: rgba(28, 49, 58, 1);
+  --danger-color-light: 211, 47, 47;
+  --danger-color: rgba(154, 0, 7, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin-top: 53px;
+  min-height: 100vh;
+  max-width: 900px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+header {
+  font-family: var(--ff-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+main div:first-child {
+  margin-top: 28px;
+}
+
+main div {
+  margin-top: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+button {
+  transition: background 0.4s ease-in-out;
+  margin-right: 10vw;
+}
+
+button {
+  --bg-color: var(--btn-default-bg-color);
+  --text-color: #3f3f3f;
+  font-family: var(--ff-noton);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 20px;
+  text-align: center;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  background-color: var(--bg-color);
+  padding: var(--padding);
+  box-shadow: var(--btn-default-shadow);
+  border-radius: var(--border-radius);
+}
+
+button:focus,
+button:hover {
+  cursor: pointer;
+  background: var(--btn-default-bg-color-hover);
+}
+
+button[variant="outline"] {
+  --text-color: var(--primary-color);
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button[variant="outline"]:focus,
+button[variant="outline"]:hover {
+  cursor: pointer;
+  background: rgba(var(--primary-color-light), 0.1);
+}
+
+button[variant="outline"][color="secondary"] {
+  --text-color: rgba(var(--secondary-color-light));
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-color);
+}
+
+button[variant="outline"][color="secondary"]:focus,
+button[variant="outline"][color="secondary"]:hover {
+  cursor: pointer;
+  background-color: rgba(var(--secondary-color-light), 0.1);
+}
+
+button[variant="text"] {
+  color: var(--primary-color);
+  border: 1px solid transparent;
+  outline: none;
+  background-color: transparent;
+  padding: var(--padding);
+  box-shadow: none;
+  border-radius: var(--border-radius);
+}
+
+button[variant="text"]:focus,
+button[variant="text"]:hover {
+  cursor: pointer;
+  background: rgba(41, 98, 255, 0.1);
+}
+
+button[disableShadow] {
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  box-shadow: none;
+}
+
+button[disableShadow]:focus,
+button[disableShadow]:hover {
+  cursor: pointer;
+}
+
+button[disabled] {
+  color: rgba(158, 158, 158, 1);
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
+  box-shadow: none;
+}
+
+button[disabled]:focus,
+button[disabled]:hover {
+  cursor: default;
+}
+
+button[disabled][variant="text"] {
+  color: rgba(158, 158, 158, 1);
+  border: none;
+  background-color: transparent;
+}
+
+button[disabled][variant="text"]:focus,
+button[disabled][variant="text"]:hover {
+  cursor: default;
+}
+
+button[startIcon],
+button[endIcon] {
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+button i.material-icons {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 20px;
+}
+
+button[startIcon] i.material-icons {
+  float: left;
+  margin: 0 10.13px 0 0;
+}
+
+button[endIcon] i.material-icons {
+  float: right;
+  margin: 0 0 0 8.67px;
+}
+
+button[size] {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+button[size="sm"] {
+  padding: var(--padding-sm);
+}
+
+button[size="md"] {
+  padding: var(--padding-md);
+}
+
+button[size="lg"] {
+  padding: var(--padding-lg);
+}
+
+button[color="default"] {
+  color: #3f3f3f;
+  background-color: var(--btn-default-bg-color);
+}
+
+button[color="default"]:focus,
+button[color="default"]:hover {
+  cursor: pointer;
+  background: var(--btn-default-bg-color-hover);
+}
+
+button[color="primary"] {
+  color: white;
+  background-color: rgba(var(--primary-color-light), 1);
+}
+
+button[color="primary"]:focus,
+button[color="primary"]:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+}
+
+button[color="secondary"] {
+  color: white;
+  background-color: rgba(var(--secondary-color-light), 1);
+}
+
+button[color="secondary"]:focus,
+button[color="secondary"]:hover {
+  cursor: pointer;
+  background: var(--secondary-color);
+}
+
+button[color="danger"] {
+  color: white;
+  background-color: rgba(var(--danger-color-light), 1);
+}
+
+button[color="danger"]:focus,
+button[color="danger"]:hover {
+  cursor: pointer;
+  background: var(--danger-color);
+}
+
+.icons-text {
+  color: rgb(112, 112, 112);
+  font-weight: 100;
+  white-space: nowrap;
+}
+
+
+footer {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  margin-left: 5px;
+  color: gray;
+  white-space: nowrap;
+}
+
+footer .username {
+  color: rgb(126, 126, 126);
+  font-weight: 550;
+  text-decoration: underline;
+}
