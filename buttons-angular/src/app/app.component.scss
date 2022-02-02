@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
+@import url("http://fonts.cdnfonts.com/css/poppins");
+@import './styles/vars';
+@import './styles/reset';
+
+
+:host {
+  font-size: 16px;
+  margin-top: 53px;
+  min-height: 100vh;
+  max-width: 900px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+header {
+  font-family: var(--ff-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+main div:first-child {
+  margin-top: 28px;
+}
+
+main div {
+  margin-top: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+footer {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  margin-left: 5px;
+  color: gray;
+  white-space: nowrap;
+}
+
+footer .username {
+  color: rgb(126, 126, 126);
+  font-weight: 550;
+  text-decoration: underline;
+}

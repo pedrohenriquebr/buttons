@@ -1,5 +1,23 @@
 {
   "0 debug pnpm:scope": {
     "selected": 1
+  },
+  "1 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "not found: start:hmr",
+      "code": "ENOENT",
+      "stack": "Error: not found: start:hmr\n    at getNotFoundError (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41495:51)\n    at Function.whichSync [as sync] (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41572:13)\n    at getCommandAbsolutePathSync (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43137:44)\n    at default_1 (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43146:32)\n    at C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:177618:39"
+    }
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "C:\\Users\\3CON-RJ\\Documents\\Dev\\devchallenges\\buttons",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: start:hmr",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: start:hmr\n    at getNotFoundError (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41495:51)\n    at Function.whichSync [as sync] (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41572:13)\n    at getCommandAbsolutePathSync (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43137:44)\n    at default_1 (C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43146:32)\n    at C:\\Users\\3CON-RJ\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.28.0\\node_modules\\pnpm\\dist\\pnpm.cjs:177618:39"
+    }
   }
 }
