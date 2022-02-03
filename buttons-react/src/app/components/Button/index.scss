@@ -139,7 +139,7 @@ button {
   }
 
   // SIZE
-  &[class^='size-']{
+  &[class*='size-']{
     color: #ffffff;
     background-color: var(--primary-color);
 
@@ -172,7 +172,7 @@ button {
     }
 
     &[color="primary"] {
-      --bg-color: rgba(var(--primary-color-light), 1) !important;
+      --bg-color: rgba(var(--primary-color-light), 1);
       color: white;
 
       &:focus,
