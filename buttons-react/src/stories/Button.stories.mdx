@@ -1,0 +1,118 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import Button from '../app/components/Button';
+
+<!--👇 The title prop determines where your story goes in the story list -->
+<Meta title="Button" component={Button} />
+
+
+<!--👇 We create a “template” of how args map to rendering -->
+<!-- // export const Template = (args) => ({ props: args }); -->
+
+export const Template = (args) => <Button {...args} />;
+
+
+<!-- 👇 The args you need here will depend on your component -->
+<Story
+  name="Default"
+  args={{}}>
+  {Template.bind({})}
+</Story>
+
+
+<Story
+  name="Primary"
+  args={{
+    color: 'primary'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+<Story
+  name="Secondary"
+  args={{
+    color: 'secondary'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+<Story
+  name="Danger"
+  args={{
+    color: 'danger'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+<Story
+  name="Outline"
+  args={{
+    variant: 'outline'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+<Story
+  name="Text"
+  args={{
+    variant: 'text'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+<Story
+  name="Small"
+  args={{
+    size: 'sm'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+<Story
+  name="Medium"
+  args={{
+    size: 'md'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+<Story
+  name="Large"
+  args={{
+    size: 'lg'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+
+<Story
+  name="Disabled"
+  args={{
+    disabled: true
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+
+<Story
+  name="DisabledShadow"
+  args={{
+    disableShadow: true
+  }}>
+  {Template.bind({})}
+</Story>
+

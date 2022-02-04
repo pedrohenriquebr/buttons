@@ -1,7 +1,7 @@
 import { ButtonProps } from '../props'
 import './index.scss'
 
-export function rClass(classes: any[]): string {
+export function rclass(classes: any[]): string {
   return classes
     .filter((d) => d)
     .join(' ')
@@ -9,12 +9,12 @@ export function rClass(classes: any[]): string {
 }
 
 export default function Button({
-  label,
-  startIcon = null,
-  endIcon = null,
+  label = 'Default',
+  startIcon = undefined,
+  endIcon = undefined,
   disableShadow = false,
   disabled = false,
-  variant = null,
+  variant = undefined,
   size = 'md',
   color = startIcon ||
   endIcon ||
@@ -27,7 +27,7 @@ export default function Button({
     <button
       disabled={disabled}
       color={color}
-      className={rClass([
+      className={rclass([
         startIcon ? 'startIcon' : null,
         endIcon ? 'endIcon' : null,
         disableShadow ? 'disableShadow' : null,
