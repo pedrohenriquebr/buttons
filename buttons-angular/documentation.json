@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-edd81c6d620afd352c79b42deb213cc591742f3b1897396c4e2c721e141f3a36c36ad9d50389c1f8a0cbda8240a54782aeccd7045dbfd57338f48b8f24b6db9c",
+            "id": "component-AppComponent-0313ba0f4e176b4e0ea02c7365b76a203003cc8e9a31d545ca899c5f721010897bd3e220a6a5d231a96bd9d7e0bb3b18146c601dc09cf6d99f1798a213b96a2b",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -58,7 +58,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent  implements OnInit{\n  ngOnInit(): void {\n  }\n  title = 'buttons-angular';\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent  implements OnInit{\r\n  ngOnInit(): void {\r\n  }\r\n  title = 'buttons-angular';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -70,11 +70,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<header>\n  Buttons\n</header>\n<main>\n  <div>\n    <app-button></app-button>\n  </div>\n  <div>\n    <app-button variant='outline'></app-button>\n  </div>\n  <div>\n    <app-button variant='text'></app-button>\n  </div>\n  <div>\n    <app-button [disableShadow]='true'></app-button>\n  </div>\n  <div>\n    <app-button [disabled]='true'></app-button>\n    <app-button variant='text' [disabled]='true'></app-button>\n  </div>\n  <div>\n    <app-button startIcon='local_grocery_store'></app-button>\n    <app-button endIcon='local_grocery_store'></app-button>\n  </div>\n  <div>\n    <app-button size='sm'></app-button>\n    <app-button size='md'></app-button>\n    <app-button size='lg'></app-button>\n  </div>\n  <div>\n    <app-button color='default'></app-button>\n    <app-button color='primary'></app-button>\n    <app-button color='secondary'>Secondary</app-button>\n    <app-button color='danger'>Danger</app-button>\n  </div>\n  <div class='icons-text'>\n    Icons: htpps://material.io/resources/icons/?style=round\n  </div>\n</main>\n<footer>\n  created by\n  <span class='username'>\n    username\n  </span>\n  - devchallenges.io\n</footer>\n"
+            "templateData": "<header>\r\n  Buttons\r\n</header>\r\n<main>\r\n  <div>\r\n    <app-button></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button variant='outline'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button variant='text'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button [disableShadow]='true'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button [disabled]='true'></app-button>\r\n    <app-button variant='text' [disabled]='true'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button startIcon='local_grocery_store'></app-button>\r\n    <app-button endIcon='local_grocery_store'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button size='sm'></app-button>\r\n    <app-button size='md'></app-button>\r\n    <app-button size='lg'></app-button>\r\n  </div>\r\n  <div>\r\n    <app-button color='default'></app-button>\r\n    <app-button color='primary'></app-button>\r\n    <app-button color='secondary'>Secondary</app-button>\r\n    <app-button color='danger'>Danger</app-button>\r\n  </div>\r\n  <div class='icons-text'>\r\n    Icons: htpps://material.io/resources/icons/?style=round\r\n  </div>\r\n</main>\r\n<footer>\r\n  created by\r\n  <span class='username'>\r\n    username\r\n  </span>\r\n  - devchallenges.io\r\n</footer>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-82485d1610467f1b45723eb702576c270d3de4c5a523fb39409fea63887b9779a1c8943888cd7ba45b985a4d15b59f948be98ecd401d19b574179dda6b74fe74",
+            "id": "component-ButtonComponent-53b7c34a61fdcd727da36545170bada73b4a8931a892d08fb61706645f933dcf96d308b66313f80e07492d5868a47c58f6d4597530b83fa2154cd961faf949af",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -186,7 +186,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  template: `\n    <button\n      [attr.variant]=\"variant\"\n      [attr.size]=\"size\"\n      [attr.color]=\"color\"\n      [attr.startIcon]=\"startIcon.length > 0 ? startIcon : undefined\"\n      [attr.endIcon]=\"endIcon.length > 0 ? endIcon : undefined\"\n      [attr.disabled]=\"disabled ? 'disabled' : undefined\"\n      [attr.disableShadow]=\"disableShadow ? 'disabledShadow' : undefined\"\n    >\n      <i *ngIf=\"startIcon.length > 0\" class=\"material-icons\">\n        {{ startIcon }}\n      </i>\n      {{ label }}\n      <i *ngIf=\"endIcon.length > 0\" class=\"material-icons\">\n        {{ endIcon }}\n      </i>\n    </button>\n  `,\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Default';\n\n  @Input() startIcon: string = '';\n  @Input() endIcon: string = '';\n  @Input() variant: 'default' | 'outline' | 'text' = 'default';\n  @Input() color: 'default' | 'primary' | 'secondary' | 'danger' = 'default';\n  @Input() size: 'sm' | 'md' | 'lg' = 'md';\n\n  @Input() disabled: boolean = false;\n  @Input() disableShadow: boolean = false;\n  constructor() {}\n\n  ngOnInit(): void {\n    if (this.startIcon != '' || (this.endIcon != '' && this.color == 'default'))\n      this.color = 'primary';\n    if (\n      this.disableShadow == true &&\n      this.color == 'default' &&\n      this.variant == 'default' &&\n      this.startIcon == '' &&\n      this.endIcon == ''\n    )\n      this.color = 'primary';\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  template: `\r\n    <button\r\n      [attr.variant]=\"variant\"\r\n      [attr.size]=\"size\"\r\n      [attr.color]=\"color\"\r\n      [attr.startIcon]=\"startIcon.length > 0 ? startIcon : undefined\"\r\n      [attr.endIcon]=\"endIcon.length > 0 ? endIcon : undefined\"\r\n      [attr.disabled]=\"disabled ? 'disabled' : undefined\"\r\n      [attr.disableShadow]=\"disableShadow ? 'disabledShadow' : undefined\"\r\n    >\r\n      <i *ngIf=\"startIcon.length > 0\" class=\"material-icons\">\r\n        {{ startIcon }}\r\n      </i>\r\n      {{ label }}\r\n      <i *ngIf=\"endIcon.length > 0\" class=\"material-icons\">\r\n        {{ endIcon }}\r\n      </i>\r\n    </button>\r\n  `,\r\n  styleUrls: ['./button.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ButtonComponent implements OnInit {\r\n  @Input() label = 'Default';\r\n\r\n  @Input() startIcon: string = '';\r\n  @Input() endIcon: string = '';\r\n  @Input() variant: 'default' | 'outline' | 'text' = 'default';\r\n  @Input() color: 'default' | 'primary' | 'secondary' | 'danger' = 'default';\r\n  @Input() size: 'sm' | 'md' | 'lg' = 'md';\r\n\r\n  @Input() disabled: boolean = false;\r\n  @Input() disableShadow: boolean = false;\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {\r\n    if (this.startIcon != '' || (this.endIcon != '' && this.color == 'default'))\r\n      this.color = 'primary';\r\n    if (\r\n      this.disableShadow == true &&\r\n      this.color == 'default' &&\r\n      this.variant == 'default' &&\r\n      this.startIcon == '' &&\r\n      this.endIcon == ''\r\n    )\r\n      this.color = 'primary';\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -211,13 +211,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-ff0324071a476bf1fac95559ddbb78c847163c5a1ca5bf8496da0e26ee7b4a772f8f9b0c56a83969346873776e74477561097ff98c155cad23c26651bc48914d",
+            "id": "module-AppModule-321e560d960ce24d8a831e2bfa9fefce15127dffb087e46dfdec3b4d12796de92c6cc52ec429f6bb17070f736e13013098bb26f849c18835d79604832a9d45a5",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from './components/button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonComponent,\n  ],\n  imports: [\n    BrowserModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { ButtonComponent } from './components/button/button.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
