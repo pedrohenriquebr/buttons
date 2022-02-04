@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "../../styles/vars";
+@import "../../styles/reset";
+
+button {
+  --bg-color: var(--btn-default-bg-color);
+  --text-color: #3f3f3f;
+  --padding: var(--padding-md);
+
+  transition: background 0.4s ease-in-out;
+  margin-right: 10vw;
+  font-family: var(--ff-noton);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 20px;
+  text-align: center;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  background-color: var(--bg-color);
+  padding: var(--padding);
+  box-shadow: var(--btn-default-shadow);
+  border-radius: var(--border-radius);
+
+  i.material-icons {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background: var(--btn-default-bg-color-hover);
+  }
+
+  // OUTLINE
+  &.variant-outline {
+    --text-color: var(--primary-color);
+    border: 1px solid var(--text-color) !important;
+    background-color: transparent !important;
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      background: rgba(var(--primary-color-light), 0.1) !important;
+    }
+
+    &[color="secondary"] {
+      --text-color: rgba(var(--secondary-color-light));
+      border: 1px solid var(--text-color);
+      background-color: transparent;
+      box-shadow: none;
+      color: var(--text-color);
+
+      &:focus,
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(var(--secondary-color-light), 0.1);
+      }
+    }
+  }
+
+  // TEXT
+  &.variant-text {
+    color: var(--primary-color) !important;
+    border: 1px solid transparent;
+    outline: none !important;
+    background-color: transparent !important;
+    padding: var(--padding);
+    box-shadow: none !important;
+    border-radius: var(--border-radius);
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      background: rgba(41, 98, 255, 0.1);
+    }
+  }
+
+  // DISABLE SHADOW
+  &.disableShadow {
+    color: #ffffff;
+    border: none !important;
+    outline: none !important;
+    background-color: var(--primary-color);
+    box-shadow: none !important;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // DISABLED
+  &[disabled] {
+    color: rgba(158, 158, 158, 1);
+    border: none;
+    outline: none;
+    background-color: #e0e0e0;
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+      cursor: default !important;
+    }
+
+    &.variant-text {
+      color: rgba(158, 158, 158, 1);
+      border: none;
+      background-color: transparent;
+      &:focus,
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  &.startIcon,
+  &.endIcon {
+    --bg-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background: var(--bg-color);
+  }
+
+  &.startIcon i.material-icons {
+    float: left;
+    margin: 0 10.13px 0 0;
+  }
+
+  &.endIcon i.material-icons {
+    float: right;
+    margin: 0 0 0 8.67px;
+  }
+
+  // SIZE
+  &[class*='size-']{
+    color: #ffffff;
+    background-color: var(--primary-color);
+
+    &.size-sm {
+      --padding: var(--padding-sm);
+    }
+
+    &.size-md {
+      --padding: var(--padding-md);
+    }
+
+    &.size-lg {
+      --padding: var(--padding-lg);
+    }
+  }
+
+  // COLOR
+  &[color] {
+    --bg-color: var(--btn-default-bg-color);
+    background-color: var(--bg-color);
+
+    &[color="default"] {
+      color: #3f3f3f;
+    }
+
+    &[color="default"]:focus,
+    &[color="default"]:hover {
+      --bg-color: var(--btn-default-bg-color-hover);
+      cursor: pointer;
+    }
+
+    &[color="primary"] {
+      --bg-color: rgba(var(--primary-color-light), 1);
+      color: white;
+
+      &:focus,
+      &:hover {
+        --bg-color: var(--primary-color);
+        cursor: pointer;
+      }
+    }
+
+    &[color="secondary"] {
+      --bg-color: rgba(var(--secondary-color-light), 1);
+      color: white;
+
+      &:focus,
+      &:hover {
+        --bg-color: var(--secondary-color);
+        cursor: pointer;
+      }
+    }
+
+    &[color="danger"] {
+      --bg-color: rgba(var(--danger-color-light), 1);
+      color: white;
+
+      &:focus,
+      &:hover {
+        --bg-color: var(--danger-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
