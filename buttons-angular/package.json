@@ -13,7 +13,8 @@
     "storybook": "pnpm docs:json && start-storybook -p 6006",
     "build-storybook": "pnpm docs:json && build-storybook",
     "predeploy": "pnpm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "compodoc": "compodoc -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {
