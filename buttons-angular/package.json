@@ -1,15 +1,19 @@
 {
   "name": "buttons-angular",
   "version": "0.0.0",
+  "homepage": "http://pedrohenriquebr.github.io/buttons",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod --base-ref 'https://' ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "pnpm docs:json && start-storybook -p 6006",
-    "build-storybook": "pnpm docs:json && build-storybook"
+    "build-storybook": "pnpm docs:json && build-storybook",
+    "predeploy": "pnpm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +27,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "gh-pages": "^3.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
